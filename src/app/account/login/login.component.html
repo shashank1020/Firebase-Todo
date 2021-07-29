@@ -1,0 +1,71 @@
+<div class="text-center position-absolute start-50 translate-middle" style="top: 10%" *ngIf="isError">
+  <div class="alert alert-danger alert-dismissible fade show">
+    {{ serverMessage.message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+<div id="h" class="form-signin text-center my-3 position-absolute start-50 translate-middle" style="top: 60%">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h1 class="h1 mb-4 fw-bold">Login Now</h1>
+
+    <div class="form-floating">
+      <input id="floatingInput"
+             type="email"
+             formControlName="email"
+             class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.email?.errors }"
+             placeholder="name@example.com"/>
+
+      <div *ngIf="submitted && f.email?.errors" class="invalid-feedback mb-2">
+        <div *ngIf="f.email?.errors?.required">Email is required</div>
+      </div>
+
+      <label for="floatingInput">Email</label>
+    </div>
+
+    <div class="form-floating">
+      <input id="floatingPassword"
+             type="password"
+             formControlName="password"
+             class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.password?.errors }"
+             placeholder="Password"/>
+
+      <div *ngIf="submitted && f.password?.errors" class="invalid-feedback">
+        <div *ngIf="f.password?.errors?.required">Password is required</div>
+      </div>
+
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary my-3"
+            type="submit"
+            [disabled]="loading">
+      <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+      Login
+    </button>
+    <label>Don't have account yet? </label>
+    <button class="w-100 btn btn-lg btn-link mt-2"
+            style="margin-bottom: 100px"
+            type="submit"
+            routerLink="../register">
+      Register Now
+    </button>
+    <label class="text-muted mb-2">Contacts to my social</label>
+
+    <div class="d-flex justify-content-center">
+      <div class="row align-items-center">
+        <a href="https://github.com/shashank1020/Registration-Login/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="bi bi-github col-auto"></a>
+
+        <a href="https://www.linkedin.com/in/shashank-maurya-15617b179"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="bi bi-linkedin col-auto"></a>
+      </div>
+    </div>
+  </form>
+</div>
+
