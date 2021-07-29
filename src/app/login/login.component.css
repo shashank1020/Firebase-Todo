@@ -1,29 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 form {
-  height: 80vh;
+  padding: 5px;
 }
-a {
-  font-size: 20px;
-  text-decoration: none;
-  color: black;
-}
+
 a:hover {
   color: #636371;
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
 }
 
 .form-signin {
@@ -51,3 +33,7 @@ a:hover {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+ #h {
+   background: white;
+   border-radius: 2em;
+ }

@@ -67,7 +67,7 @@ export class AuthService {
   logout(): Promise<void> {
     this.isLoggedIn = false
     localStorage.removeItem('user')
-    this.route.navigate(['/login'])
+    this.route.navigate(['/about'])
     return this.afu.signOut()
   }
 }

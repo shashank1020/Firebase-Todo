@@ -10,37 +10,16 @@ import {AngularFireModule} from "@angular/fire";
 import {AngularFireDatabaseModule} from "@angular/fire/database";
 import {AngularFirestoreModule} from "@angular/fire/firestore";
 
-
 import {AuthGuard} from "./service/auth.guard";
 
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCardModule} from "@angular/material/card";
-import {DragDropModule} from "@angular/cdk/drag-drop";
-import {MatButtonModule} from "@angular/material/button";
-import {MatDialogModule} from "@angular/material/dialog";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
+import {AboutComponent} from './about/about.component';
 
-import {
-  TodosComponent,
-  TasksComponent,
-  LoginComponent,
-  RegisterComponent,
-  AboutComponent,
-  TaskDialogComponent
-} from './account';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    AboutComponent,
-    TodosComponent,
-    TasksComponent,
-    TaskDialogComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -52,15 +31,8 @@ import {
     AngularFireDatabaseModule,
     AngularFirestoreModule,
 
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    DragDropModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule
+    FormsModule,
+
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

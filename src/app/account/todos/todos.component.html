@@ -1,17 +1,10 @@
-<mat-toolbar color="primary">
-  <mat-icon>local_fire_department</mat-icon>
-  <span>TODOS</span>
-  <button class="btn btn-success mx-5" (click)="logout()">Log out</button>
-</mat-toolbar>
-
-
-<div class="content-wrapper">
+<div class="content-wrapper mt-5">
   <button mat-button (click)="newTask()">
     <mat-icon>add</mat-icon>
     Add Task
   </button>
-  <div class="container-wrapper">
-    <div class="container">
+  <div class="container-wrapper row">
+    <div class="container col-md-4 col-12 col-sm-5">
       <h2>Waiting</h2>
       <mat-card cdkDropList id="todo"
                 #todoList="cdkDropList"
@@ -27,9 +20,10 @@
       </mat-card>
     </div>
 
-    <div class="container">
+    <div class="container col-md-4 col-12 col-sm-5">
       <h2>In Progress</h2>
       <mat-card cdkDropList id="inProgress"
+
                 #inProgressList="cdkDropList"
                 [cdkDropListData]="inProgress | async"
                 (cdkDropListDropped)="drop($event)"
@@ -44,7 +38,7 @@
       </mat-card>
     </div>
 
-    <div class="container">
+    <div class="container col-md-4 col-12 col-sm-5">
       <h2>Done</h2>
       <mat-card cdkDropList id="done"
                 #doneList="cdkDropList"

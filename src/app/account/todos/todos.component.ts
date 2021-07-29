@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
-import {Task} from '../tasks/task'
+import {Task} from './tasks/task'
 import {CdkDragDrop, transferArrayItem} from "@angular/cdk/drag-drop";
 import {MatDialog} from "@angular/material/dialog";
-import {TaskDialogComponent, TaskDialogResult} from "../task-dialog/task-dialog.component";
+import {TaskDialogComponent, TaskDialogResult} from "./task-dialog/task-dialog.component";
 import {AngularFirestore, AngularFirestoreCollection} from "@angular/fire/firestore";
 import {BehaviorSubject} from "rxjs";
 import {AuthService} from "../../service/auth.service";

@@ -2,32 +2,28 @@
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        <img src="./assets/todo.png" height="42" width="42" style="color: white">
       </a>
 
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="https://github.com/shashank1020/Firebase-Todo/"
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 fs-6">
+        <li><i class=" float-start"></i><a href="https://github.com/shashank1020/Firebase-Todo/"
                target="_blank"
                rel="noopener noreferrer"
-               class="nav-link px-2 text-secondary">Github</a></li>
+               class="nav-link px-2 text-primary bi bi-github"> Github</a></li>
         <li><a href="https://www.linkedin.com/in/shashank-maurya-15617b179"
                target="_blank"
                rel="noopener noreferrer"
-               class="nav-link px-2 text-white">Linkedin</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+               class="nav-link px-2 text-white bi bi-linkedin"> Linkedin</a></li>
         <li><a routerLink="/about" class="nav-link px-2 text-white">About</a></li>
       </ul>
-
 
       <div class="text-end">
         <button *ngIf="!isLoggedIn()" routerLink="/login" type="button" class="btn btn-outline-light me-2">Login</button>
         <button *ngIf="!isLoggedIn()" routerLink="/register" type="button" class="btn btn-warning">Sign-up</button>
-        <button *ngIf="isLoggedIn()" class="btn btn-warning">Logout</button>
+        <button *ngIf="isLoggedIn()" (click)="logout()" class="btn btn-warning">Logout</button>
       </div>
     </div>
   </div>
 </header>
-
 
 <router-outlet></router-outlet>

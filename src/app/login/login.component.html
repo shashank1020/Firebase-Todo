@@ -4,8 +4,9 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 </div>
-<div id="h" class="form-signin text-center my-3 position-absolute start-50 translate-middle" style="top: 60%">
+<div id="h" class="form-signin text-center mb-3 position-absolute start-50 translate-middle shadow-lg" style="top: 55%">
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <img class="mb-4" src="../../assets/todo.png" alt="" width="77" height="77">
     <h1 class="h1 mb-4 fw-bold">Login Now</h1>
 
     <div class="form-floating">
@@ -51,21 +52,6 @@
             routerLink="../register">
       Register Now
     </button>
-    <label class="text-muted mb-2">Contacts to my social</label>
-
-    <div class="d-flex justify-content-center">
-      <div class="row align-items-center">
-        <a href="https://github.com/shashank1020/Registration-Login/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="bi bi-github col-auto"></a>
-
-        <a href="https://www.linkedin.com/in/shashank-maurya-15617b179"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="bi bi-linkedin col-auto"></a>
-      </div>
-    </div>
   </form>
 </div>
 

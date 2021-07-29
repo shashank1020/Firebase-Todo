@@ -1,0 +1,49 @@
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <span class="display-4 fw-bold mx-1">Project:</span>
+      <span class="display-4"> Firebase Todo</span>
+    </a>
+  </header>
+
+  <main>
+    <h1 *ngIf="isLoggedIn()" class="fs-2"> Hi, {{name | titlecase}} </h1>
+    <h1 *ngIf="!isLoggedIn()"> Welcome, User</h1>
+    <p class="fs-5 col-md-8"> This site all about your todos, each user get its own todo. </p>
+    <p class="fs-5 col-md-8"> It is based on Angular 12, Bootstrap 5 ... </p>
+
+    <div class="mb-5">
+      <a [routerLink]="['/todos',uid ,name]" class="btn btn-primary btn-lg px-4">Go to my Todo</a>
+    </div>
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="container row g-5 row-cols-auto">
+
+      <div class="col ">
+        <img class="shadow-lg mx-auto d-block rounded" src="../../assets/owner.jpg" height="260px" width="260px" title="Site Maker">
+      </div>
+
+      <div class="col p-5 ">
+        <h1 class="fs-4 fw-bold">About me</h1>
+        <h1>Shashank Maurya</h1>
+        <p> I'm a Devloper Angular Developer, python lover. Eager for Learning </p>
+
+      </div>
+      <div class="col p-3 ">
+        <h2>Guides</h2>
+        <p>Here if you want my source code on <a href="https://github.com/shashank1020/Firebase-Todo/" target="_blank" rel="noopener noreferrer"> Github </a></p>
+        <p class="fw-bold">To install</p>
+        <ul class="icon-list">
+          <li>clone from github</li>
+          <li>npm install</li>
+          <li>npm serve (for development environment) </li>
+          <li>ng build (production environment)</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    Created by the &copy;Shashank &middot; July 2021
+  </footer>
+</div>
