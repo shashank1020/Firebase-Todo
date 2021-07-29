@@ -23,6 +23,7 @@ const getObservable = (collection: AngularFirestoreCollection<Task>) => {
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent {
+  help:boolean = true
   constructor(private dialog: MatDialog, private store: AngularFirestore, private authService: AuthService) {
   }
   curUser = this.store.collection('users').doc(this.authService.currentUserId)
@@ -78,6 +79,10 @@ export class TodosComponent {
     dialogRef
       .afterClosed()
       .subscribe((result: TaskDialogResult) => this.store.collection(`users/${this.authService.currentUserId}/todo`).add(result.task))
+  }
+
+  showHelp() {
+    this.help = !this.help
   }
 
   logout() {

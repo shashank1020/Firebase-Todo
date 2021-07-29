@@ -1,4 +1,16 @@
-<div class="content-wrapper mt-5">
+<div class="text-center position-absolute start-50 translate-middle alert alert-dismissible alert-info fade show shadow" style="top: 13%"
+     role="alert" *ngIf="help">
+  <strong>Instructions</strong>
+  <ul class="icon-list">
+    <li>to make a task click on Add task button</li>
+    <li>to remove/edit task click on the task and delete</li>
+    <li>to update to task to different status do drag and drop</li>
+  </ul>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="showHelp()"></button>
+</div>
+<button class="btn btn-outline-info-info bi bi-info-circle-fill text-center" (click)="showHelp()"
+        title="How to Use"></button>
+<div class="content-wrapper mt-3">
   <button mat-button (click)="newTask()">
     <mat-icon>add</mat-icon>
     Add Task

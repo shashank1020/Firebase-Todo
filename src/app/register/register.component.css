@@ -10,8 +10,3 @@
 .form-control:focus {
   box-shadow: none
 }
-
-.btn-signup {
-  height: 50px;
-  border-radius: 10px
-}
